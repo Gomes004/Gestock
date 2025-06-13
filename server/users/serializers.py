@@ -1,10 +1,9 @@
 from rest_framework import serializers
-from .models import CustomUser, EmailConfirmationToken
+from .models import CustomUser
 from django.core.mail import send_mail
 from django.conf import settings
 from .models import UserProfile
 import uuid
-from rest_framework.authtoken.models import Token
 
 
 class UserSerializerList(serializers.ModelSerializer):

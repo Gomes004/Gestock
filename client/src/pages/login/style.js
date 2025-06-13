@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.div`
   max-width: 400px;
@@ -8,12 +8,19 @@ export const Container = styled.div`
   border-radius: 8px;
   background-color: #f9f9f9;
   text-align: center;
-`;
+
+  display: flex;
+  flex-direction: column;
+
+  a {
+    align-self: center;
+  }
+`
 
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-`;
+`
 
 export const Input = styled.input`
   padding: 10px;
@@ -21,7 +28,7 @@ export const Input = styled.input`
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
-`;
+`
 
 export const Button = styled.button`
   padding: 10px;
@@ -34,21 +41,21 @@ export const Button = styled.button`
   &:hover {
     background-color: #4fa3c7;
   }
-`;
+`
 
 export const ErrorMessage = styled.span`
   color: red;
   font-size: 14px;
   margin-bottom: 10px;
-`;
+`
 
 export const CheckboxContainer = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 15px;
-`;
+`
 
 export const CheckboxLabel = styled.label`
   margin-left: 8px;
   font-size: 14px;
-`;
+`

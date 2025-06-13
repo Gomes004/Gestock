@@ -14,6 +14,7 @@ import ResetPassword from './pages/resetPassword'
 import ProductsPage from './pages/products'
 import SuppliersPage from './pages/suppliers'
 import ReplenishmentsPage from './pages/replenishments'
+import UserManagement from './pages/userManagement'
 
 const AppRoutes = ({
   isAuthenticated,
@@ -24,11 +25,7 @@ const AppRoutes = ({
 }) => {
   return (
     <Router>
-      <Header
-        isAuthenticated={isAuthenticated}
-        userRole={userRole}
-        handleLogout={handleLogout}
-      />
+      <Header isAuthenticated={isAuthenticated} handleLogout={handleLogout} />
       <Routes>
         <Route path='*' element={<NotFound />} />
         <Route path='/' element={<Home />} />
@@ -52,7 +49,10 @@ const AppRoutes = ({
             />
           }
         >
-          <Route path='/dashboard' element={<Dashboard />} />
+          <Route
+            path='/dashboard'
+            element={<Dashboard userRole={userRole} />}
+          />
           <Route path='/edit-profile' element={<EditProfile />} />
           <Route
             path='/products'
@@ -73,6 +73,7 @@ const AppRoutes = ({
         >
           <Route path='/suppliers' element={<SuppliersPage />} />
           <Route path='/replenishments' element={<ReplenishmentsPage />} />
+          <Route path='/users-management' element={<UserManagement />} />
         </Route>
       </Routes>
     </Router>

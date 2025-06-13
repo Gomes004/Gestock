@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
 import { toast } from 'react-toastify'
-import { useNavigate } from 'react-router-dom'
 import {
   Container,
   Form,
@@ -43,7 +42,13 @@ const EditProfile = () => {
         setValue('username', response.data.username)
         setValue('email', response.data.email)
         setValue('description', response.data.description)
-        setUserRole(response.data.role)
+        const roleTranslations = {
+          admin: 'Administrador',
+          manager: 'Gestor',
+          stock_operator: 'Operador de Estoque',
+        }
+
+        setUserRole(roleTranslations[response.data.role] || response.data.role)
 
         if (response.data.profile_picture) {
           setCurrentProfilePicture(response.data.profile_picture)
@@ -111,7 +116,9 @@ const EditProfile = () => {
           }
           alt='Foto de perfil'
         />
-        <p>{userRole}</p>
+        <FormGroup>
+          <label>Cargo:</label> {userRole}
+        </FormGroup>
         <FormGroup>
           <label>Nome:</label>
           <input
@@ -138,7 +145,6 @@ const EditProfile = () => {
           />
         </FormGroup>
         {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
-
         <FormGroup>
           <label>Descrição:</label>
           <input
@@ -147,7 +153,6 @@ const EditProfile = () => {
             {...register('description')}
           />
         </FormGroup>
-
         <FormGroup>
           <label>Imagem:</label>
           <input

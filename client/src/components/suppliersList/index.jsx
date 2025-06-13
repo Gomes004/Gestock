@@ -21,6 +21,7 @@ import {
   InactiveStatus,
   ActionsContainer,
 } from './style'
+import { MdFileDownloadDone, MdOutlineCancel } from 'react-icons/md'
 
 function SupplierList() {
   const [suppliers, setSuppliers] = useState([])
@@ -290,22 +291,12 @@ function SupplierList() {
                       </CheckboxGroup>
                     </FormGroup>
 
-                    <FormGroup>
-                      <label>
-                        <input
-                          type='checkbox'
-                          name='is_active'
-                          checked={editForm.is_active}
-                          onChange={handleEditChange}
-                        />
-                        Ativo
-                      </label>
-                    </FormGroup>
-
                     <ActionsContainer>
-                      <SaveButton type='submit'>Salvar</SaveButton>
+                      <SaveButton type='submit'>
+                        Salvar <MdFileDownloadDone />
+                      </SaveButton>
                       <CancelButton type='button' onClick={cancelEdit}>
-                        Cancelar
+                        Cancelar <MdOutlineCancel />
                       </CancelButton>
                     </ActionsContainer>
                   </EditForm>

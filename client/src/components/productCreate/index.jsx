@@ -10,6 +10,7 @@ import {
   InputGroup,
   SubmitButton,
 } from './style'
+import { toast } from 'react-toastify'
 
 function CreateProductComponent() {
   const [formData, setFormData] = useState({

@@ -66,12 +66,17 @@ export const CheckboxGroup = styled.div`
 
   label {
     display: flex;
-    align-items: center;
     gap: 0.5rem;
     font-weight: normal;
     cursor: pointer;
     padding: 0.25rem;
     border-radius: 4px;
+    margin: 0;
+    background-color: #fff;
+
+    input {
+      width: 2rem;
+    }
 
     &:hover {
       background-color: #f0f0f0;

@@ -101,7 +101,7 @@ const Login = ({ setIsAuthenticated }) => {
         </Button>
       </Form>
 
-      <Link to='/register'>Não possui registro? </Link>
+      <Link to='/register'>Não possui registro?</Link>
       <Link to='/forgot-password'>Esqueceu sua senha?</Link>
     </Container>
   )

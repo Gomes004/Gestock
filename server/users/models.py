@@ -16,7 +16,7 @@ class CustomUserManager(BaseUserManager):
         user.set_password(password)
         user.save(using=self._db)
 
-        #UserProfile.objects.get_or_create(user=user)
+        # UserProfile.objects.get_or_create(user=user)
 
         return user
 
@@ -24,7 +24,6 @@ class CustomUserManager(BaseUserManager):
         extra_fields.setdefault("is_staff", True)
         extra_fields.setdefault("is_superuser", True)
         extra_fields.setdefault("role", "admin")
-
         extra_fields.setdefault("is_active", True)
 
         user = self.create_user(email, password, **extra_fields)

@@ -33,11 +33,16 @@ export const NavItem = styled.li`
   a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 0.3rem 0.8rem;
     border-radius: 4px;
     transition: all 0.3s ease;
     border: 1px solid #444;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 
     &:hover {
       color: #61dafb;
@@ -53,8 +58,8 @@ export const NavItem = styled.li`
 `
 
 export const NavButton = styled.button`
-  margin: 0 1rem;
-  padding: 0 1rem;
+  margin-left: 1rem;
+  padding: 0 0.5rem;
   font-size: 1.2rem;
   background-color: #d9534f;
   color: white;
@@ -62,6 +67,13 @@ export const NavButton = styled.button`
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
+  height: 80%;
+  align-self: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 
   &:hover {
     background-color: #c9302c;

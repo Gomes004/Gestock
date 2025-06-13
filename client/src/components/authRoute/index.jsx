@@ -9,7 +9,6 @@ const AuthRoute = ({ isAuthenticated, userRole, allowedRoles, loading }) => {
     return <Navigate to='/login' replace />
   }
 
-  console.log(userRole)
   if (!allowedRoles.includes(userRole)) {
     return <Navigate to='/unauthorized' replace />
   }

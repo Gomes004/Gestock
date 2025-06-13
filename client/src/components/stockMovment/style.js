@@ -26,8 +26,9 @@ export const SectionTitle = styled.h2`
     background-color: #28a745;
     color: #fff;
     border-radius: 5px;
-    padding: 0 0.5rem;
+    padding: 0.5rem 1rem;
     transition: background-color 0.2s;
+    font-weight: bold;
     cursor: pointer;
     &:hover {
       background-color: #218838;

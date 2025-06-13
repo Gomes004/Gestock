@@ -90,9 +90,20 @@ export const Button = styled.button`
   transition: background-color 0.2s;
   margin-right: 0.5rem;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
   &:hover {
     opacity: 0.9;
   }
+`
+
+export const ButtonsContainer = styled.button`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 `
 
 export const PrimaryButton = styled(Button)`

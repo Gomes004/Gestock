@@ -51,9 +51,6 @@ const GlobalStyle = createGlobalStyle`
     max-width: 100%;
     display: block;
   }
-
-
-
 `
 
 export default GlobalStyle

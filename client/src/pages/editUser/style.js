@@ -3,10 +3,12 @@ import styled from 'styled-components'
 export const Container = styled.div`
   max-width: 400px;
   margin: 0 auto;
+  margin-bottom: 1rem;
   padding: 20px;
   border: 1px solid #eee;
   border-radius: 8px;
   background-color: #f9f9f9;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,10 +17,13 @@ export const Container = styled.div`
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
+  align-items: center;
 `
 
 export const FormGroup = styled.div`
   margin-bottom: 1.5rem;
+  width: 100%;
+
   label {
     display: block;
     margin-bottom: 0.5rem;
@@ -73,7 +78,4 @@ export const ProfilePicture = styled.img`
   margin-bottom: 15px;
   object-fit: cover;
   background-color: gray;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 `

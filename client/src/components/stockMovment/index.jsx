@@ -18,6 +18,7 @@ import {
   MovementTypeOut,
 } from './style'
 import { toast } from 'react-toastify'
+import { MdOutlineFileDownload } from 'react-icons/md'
 
 function StockMovementComponent() {
   const [movements, setMovements] = useState([])
@@ -143,6 +144,7 @@ function StockMovementComponent() {
       toast.error(error.response?.data?.detail || 'Erro ao baixar o relatório')
     }
   }
+
   return (
     <StockMovementContainer>
       <MainTitle>Movimentação de Estoque</MainTitle>
@@ -211,8 +213,10 @@ function StockMovementComponent() {
 
       <SectionContainer>
         <SectionTitle>
-          Histórico de Movimentações{' '}
-          <button onClick={downloadPDF}>Baixar Relatório</button>
+          Histórico de Movimentações
+          <button onClick={downloadPDF}>
+            Baixar Relatório <MdOutlineFileDownload />
+          </button>
         </SectionTitle>
 
         <HistoryTable>

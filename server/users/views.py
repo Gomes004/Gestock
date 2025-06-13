@@ -6,7 +6,6 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
 from .models import CustomUser, UserProfile
-from django.utils import timezone
 from django.contrib.auth import authenticate, login
 from django.core.mail import send_mail
 from django.conf import settings

@@ -29,6 +29,7 @@ export const SuppliersTable = styled.table`
   border-collapse: collapse;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   margin-top: 1.5rem;
+  font-size: 90%;
 `
 
 export const TableHeader = styled.thead`
@@ -126,6 +127,11 @@ export const Button = styled.button`
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 `
 
 export const EditButton = styled(Button)`
