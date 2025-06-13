@@ -32,7 +32,7 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em s
    yarn dev
    ```
 
-   O frontend estará rodando em `http://localhost:3000`.
+   O frontend estará rodando em `http://localhost:5173`.
 
 ### Backend (Django)
 
